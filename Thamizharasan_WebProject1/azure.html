@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset= "utf-8">
+<title> Azure Web Apps for Developers </title>
+<link rel="stylesheet" type="text/css" href="font.css">
+</head>
+<body>
+
+<header>
+
+<hgroup>
+<h1> Chapter1 </h1>
+<h1> Microsoft Azure Web Apps </h1>
+</hgroup>
+
+
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section>
+<article>
+
+<h2>Introduction</h2>
+
+<p> Microsoft azure is a cloud computing service created by Microsoft, it is Infrastructure as a Service(IaaS) and Platform as a Service(PaaS) that can be used for storage, networking, computing and much more.
+The Developers have the option to select from the languages such as C#, PHP, HTML5, Java, Python, and Node.ja to write their code and use easy tools platform-specific Azure SDKs and Visual studio to start immediately.
+ The readers should have a basic knowledge about azure, since this book focuses on Azure web apps and not on essential aspects of the Microsoft Azure platform.</p>
+
+<h2>Introduction to azure apps service plans</h2>
+
+<p>An App service plan allows us to define the region and pricing tier which can be shared accross the app service types, which are Web Apps, Mobile Apps, Logic Apps, and API Apps. The App services are categorised into five types:</p>
+<ol>
+       <li><b>Free</b> The free tier is considered for evaluation purpose; that is why it is free. Web apps in this tier share machine resouces with other web apps from other azure subscribers. Since the resources are shared, you have limited daily compute and network bandwidth limits.</li>
+       <li> <b>Shared</b> The shared tier also shares machine resources with other web apps, but the daily compute and network bandwidth limits are increased. This tier is intended for low-traffic sites and enables support for a few features, such as custom domains and the ability to scale out to multiple shared instances.</li>
+       <li> <b>Basic</b> The basic tier gives the dedicated machine instances to host your web app and, therefore, has no daily resource limits. In this tier, you are able to scale up the size of your dedicated virtual machine to increase the number of cores and RAM. This tier enables additonal Azure Web App features and also is backed by SLA</li>
+       <li> <b>Standard</b> The standard tier has all the features of the basic tier, and it enables all the features available to Azure web apps. Some of the features such as automated backups, autoscale,and more are enabled in this tier </b> </li>
+       <li> <b>Premium</b> The premium tier provides same set of feature like the standard tier but, with some extra capacity. It also enables BizTalk integration capabilities.</li>
+</ol>
+
+<h2>Creating an Azure Web App using the Azure portal</h2>
+
+<p>In Visual Studio, create a project by selecting File > New > Project.<br>
+In the New Project dialog, select Visual C# > Web > ASP.NET Core Web Application.<br>
+Name the application myFirstAzureWebApp, and then select OK.</p>
+
+<figure>
+  <img src="https://docs.microsoft.com/en-us/azure/app-service/media/app-service-web-get-started-dotnet/new-project.png" alt="Visual Studios">
+  <figcaption>Image 1.</figcaption>
+</figure>
+
+<p>You can deploy any type of ASP.NET web app to Azure. For this quickstart, select the MVC template, and make sure authentication is set to No Authentication<br>. Select Enable Docker Compose support<br>.
+Select OK</p>.
+
+<figure>
+  <img src="https://docs.microsoft.com/bs-latn-ba/azure/app-service/media/app-service-web-get-started-windows-container/select-mvc-template.png" alt="Visual Studios">
+  <figcaption>Image 2.</figcaption>
+</figure>
+
+<p> From the menu, select Debug > Start without Debugging to run the web app locally.</p>
+
+<figure>
+  <img src="https://docs.microsoft.com/bs-latn-ba/azure/app-service/media/app-service-web-get-started-windows-container/local-web-app.png" alt="Visual Studios">
+  <figcaption>Image 3.</figcaption>
+</figure>
+
+<h2> Publish to Docker Hub</h2>
+<p>In the Solution Explorer, right-click the myFirstAzureWebApp project and select Publish</p>
+
+<figure>
+  <img src="https://docs.microsoft.com/bs-latn-ba/azure/app-service/media/app-service-web-get-started-windows-container/solution-explorer-publish.png" alt="Visual Studios">
+  <figcaption>Image 4. </figcaption>
+</figure>
+
+<p> The publish wizard is automatically launched. Select Container Registry > Docker Hub > Publish. </p>
+
+<figure>
+  <img src="https://docs.microsoft.com/bs-latn-ba/azure/app-service/media/app-service-web-get-started-windows-container/publish-to-docker.png" alt="Visual Studios">
+  <figcaption>Image 5. </figcaption>
+</figure>
+
+<p>Supply your Docker Hub account credentials and click Save.<br>
+
+Wait for the deployment to complete. The Publish page now shows the repository name that you will use later in App Service.</p>
+
+<figure>
+  <img src="https://docs.microsoft.com/bs-latn-ba/azure/app-service/media/app-service-web-get-started-windows-container/published-docker-repository.png" alt="Visual Studios">
+  <figcaption>Image 6. </figcaption>
+</figure>
+</article>
+</section>
+
+<footer>
+
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+</footer>
+</body>
+</html>
